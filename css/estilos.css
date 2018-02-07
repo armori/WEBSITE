@@ -1,0 +1,513 @@
+/* Estilos generales */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color:rgb(235, 235, 235); */
+
+    color:rgb(39, 39, 39);
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+
+    line-height:1.5em;
+}
+
+@keyframes interm{
+    0% {opacity: 0};
+    50% {opacity: 1};
+    100% {opacity: 0};
+}
+
+/*cabecera / barra de navegación*/
+header{
+    position:absolute;
+    top:0;
+    height: 100px;
+    width:100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+header.blanco{
+    box-shadow: 0px 4px 4px grey;
+    /* box-shadow: initial; */
+}
+
+/*header nav ul a*/
+a{
+    text-decoration:none;
+    color: rgb(82, 82, 82);
+}
+
+a:hover{
+    color: black;
+    font-style: italic;/*Color/es corporativos*/
+}
+
+.logo{
+    font-size:60px;
+}
+
+.logo .blanco{
+    color:white;
+}
+
+header nav ul{
+    list-style:none;
+    display:flex;
+    /* background-color: rgba(216, 216, 216, 0.8) */
+    background-color: rgba(202, 202, 202, 0.8);
+}
+
+.blanco nav ul{
+    list-style:none;
+    display:flex;
+    /* background-color: rgba(216, 216, 216, 0.8) */
+    background-color: rgb(82, 82, 82);
+}
+
+.blanco nav ul a{
+     color:white; 
+}
+
+header nav ul li{
+    padding: 30px 10px;
+    /* text-shadow:0px 0px 2px white; */
+}
+
+i[class*="fa fa-desktop"]::before{
+    background:transparent;
+ }
+ 
+
+.hero{
+    height:100vh;
+    background-image:url("../img/website_hero.jpg");
+    background-size:cover;
+    /* background-position: center;
+    background-size:cover;
+    background-attachment:fixed;*/
+    
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero h1{
+    background-color: rgba(202, 202, 202, 0.8);
+    font-size: 50px;
+    padding-bottom:10px;
+}
+
+.hero h2{
+    margin-bottom: 50px;
+    background-color: rgba(202, 202, 202, 0.8)
+}
+
+.hero a{
+
+    margin-bottom: 50px;
+    animation-name: interm;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    background:none;
+}
+
+.fila{
+    margin:40px;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.col1{
+    /* border: 1px solid red; */
+    flex-basis:300px;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.col2{
+    /* border: 1px solid red; */
+    flex-basis:300px;
+    flex-grow: 2;
+    padding: 10px;
+}
+
+.col3{
+    /* border: 1px solid red; */
+    flex-basis:300px;
+    flex-grow: 3;
+    padding: 10px;
+}
+
+.centrado{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+img{
+    max-width:100%; /*se reduce la imagen relativa al tamaño de la pantalla
+                    y su bloque*/
+}
+
+.pie{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    /* align-items:flex-end; */
+}
+
+.columna{
+    display: flex;
+    flex-direction:column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.botonnaranja{
+    color: white;
+    font-size:22px;
+    padding:5px;
+    background-color:#EA5C1C;
+    border-radius:5px;
+}
+
+.botonnaranja:hover{
+    background-color:#DF4215;
+}
+
+.botonazul{
+    color: white;
+    font-size:22px;
+    padding:5px;
+    background-color:#2DABE3;
+    border-radius:5px;
+}
+
+.botonazul:hover{
+    background-color:#0D71B9;
+}
+
+.botonamarillo{
+    color: white;
+    font-size:22px;
+    padding:5px;
+    background-color:#F3C100;
+    border-radius:5px;
+}
+
+.fondo{
+    margin:0;
+    padding:60px 40px;
+    background-image:url("../img/fondo.jpg");
+    /* background-color:yellowgreen; */
+    background-position:center;
+    background-size: cover;
+    background-attachment:fixed; /*Parallax*/
+}
+
+.eslogan{
+    font-size: 50px;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.7);
+}
+
+p{
+    line-height:1.5em;
+
+}
+
+.miniform input{
+    padding:10px;
+    font-size:24px;
+    color: orange;
+    /* border: 2px solid green; */
+
+}
+
+.input:focus{
+    outline-color:red;
+}
+
+.miniform{
+    display:flex;
+    flex-wrap:wrap;
+
+    width:100%;
+    padding:0;
+    justify-content:center;
+    align-items:center;
+
+    flex-direction: column;
+}
+
+.miniform boton{
+    
+    padding:10px;
+    font-size:24px;
+    color: orange;
+    /* border: 2px solid green; */
+    color: white;
+}
+
+footer{
+    /* background-color:grey; */
+    display:flex;
+    flex-wrap:wrap;
+    color:white;
+    justify-content:space-between;
+
+    background:
+linear-gradient(135deg, #708090 22px, #030303 22px, #030303 24px, transparent 24px, transparent 67px, #030303 67px, #030303 69px, transparent 69px),
+linear-gradient(225deg, #708090 22px, #030303 22px, #030303 24px, transparent 24px, transparent 67px, #030303 67px, #030303 69px, transparent 69px)0 64px;
+background-color:#708090;
+background-size: 64px 128px;
+
+    position:relative;
+    /*es relative por defecto pero determinarlo nos permite situar elementos
+    con posición absoluta dentro, como el botón de volver arriba*/
+}
+
+footer p{
+    font-size: 18px;
+    padding: 5px;
+}
+
+.izdo{
+    padding:15px;
+    border: solid 1px white;
+    flex-basis: 300px;
+    flex-grow:1;
+}
+
+.centro{
+    border: solid 1px white;
+    display:flex;
+    flex-basis: 300px;
+    flex-grow:1;
+    padding: 15px;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.dcho{
+    border: solid 1px white;
+    display:flex;
+    flex-basis: 300px;
+    flex-grow:1;
+    padding: 15px;
+    flex-direction:column;
+    /* justify-content:center; */
+    align-items:center;
+
+    justify-content: space-between;
+}
+
+.copy{
+    padding:5px;
+    border: solid 1px white;
+    width:100%;
+    /* align-items:right; */
+}
+
+.copy p{
+    text-align:right;
+}
+
+footer a{
+    color: white;
+    font-size:18px;
+    padding:5px;
+}
+
+a.activo{
+    font-weight:bold;
+}
+
+.top{
+    color:black;
+    /* background-color: grey; */
+    /* height: 50px;
+    width: 50px; */
+    position: absolute;
+    top: -30px;
+    left:50%; 
+    transform: translateX(-50%); /*La mitad del ancho del elemento*/
+
+    font-size: 36px;
+
+    height:50px;
+    width:50px;
+    border-radius:25px;
+    background-color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.burger{
+    font-size: 34px;
+    display:none;
+    /* background-color: rgba(202, 202, 202, 0.8) */
+}
+
+.blanco .burger{
+    /* color:white; */
+}
+
+.activo{
+    color:white;
+    font-weight:bold;
+}
+
+.separador{
+    display:none;
+}
+
+/* Media queries */
+
+.primera{
+    margin-top: 100px;
+}
+
+/* .ultima{
+    padding: 40px 20px 40px;
+} */
+
+/*Estilos para contacto*/
+.direccion{
+
+}
+
+.legales h1, .cookies h1{
+    font-size:26px;
+}
+
+.legales h2, .cookies h2{
+    font-size: 20px;
+}
+
+.legales p, .cookies p, .cookies li{
+    font-size: 16px;
+}
+/*El cambio en la lista de cookies funciona pero la fuente es distinta y 
+parece más grande*/
+
+.legales p{
+    margin:20px 0px;
+}
+
+.rrss a{
+
+}
+
+@media (max-width: 917px){
+    .izdo, .centro, .dcho{
+        flex-basis:200px;
+    }
+}
+
+
+@media (max-width: 720px){
+    .fila{
+        display:flex;
+        flex-direction:column;
+    }
+
+    /* .col1, .col2, .col3{
+        flex-basis:column;
+
+    } */
+
+    .fila.primera{
+        margin: 100px 0px 20px 0px;
+    }
+
+    .separador{
+        display:initial;
+    }
+
+    .columna{
+         /* margin: 20px;  */
+    }
+
+    .col1{
+        flex-basis: initial;
+    }
+
+    .col3{
+        flex-basis: initial;
+    }
+
+    .izdo, .centro, .dcho, .copy p{
+        text-align:center;
+    }
+
+}
+
+@media (max-width: 640px){
+
+    .burger{
+        display:initial;
+    }
+
+
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size: 36px;
+        width:100%;
+        text-align:center;
+        padding: 0 10px;
+    }
+
+    .hero h2{
+        font-size: 24px;
+        width:100%;
+        text-align:center;
+        padding: 0 10px;
+    }
+
+    .col1{
+        flex-basis: initial;
+    }
+
+    .col3{
+        flex-basis: initial;
+    }
+
+}
+
+@media (max-width:420px){
+    .fila{
+        margin:20px 10px 10px;
+    }
+
+    .eslogan{
+        font-size:20px;
+    }
+
+    .miniform input{
+        width: 200px;
+        font-size: 14px;
+    }
+
+    footer{
+        margin-top:50px;
+    }
+}
